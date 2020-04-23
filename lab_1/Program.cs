@@ -60,6 +60,18 @@ namespace lab_1
             Console.WriteLine(list.Get(3));
             
             Console.WriteLine(list.Contains("3.9"));
+            
+            
+            LinkedList<int> numericList = new LinkedList<int>();
+
+            for (int i = 0; i < 50; i++)
+            {
+                numericList.Add(i);
+            }
+            
+            Console.WriteLine(numericList);
+            numericList.Reverse();
+            Console.WriteLine(numericList);
         }
     }
 }

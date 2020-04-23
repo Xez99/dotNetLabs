@@ -5,12 +5,12 @@ using System.Text;
 
 namespace lab_1.utils
 {
-    //#nullable enable
-    public class LinkedList<T> : List<T> where T : class
+    #nullable enable
+    public class LinkedList<T> : List<T>
     {
         private int size = 0;
-        private Node<T> head = null;
-        private Node<T> tail = null;
+        private Node<T>? head = null;
+        private Node<T>? tail = null;
 
 
         public void AddFirst(T t)
@@ -224,10 +224,10 @@ namespace lab_1.utils
             return sb.ToString();
         }
 
-        private class Node<T> where T : class?
+        private class Node<T>
         {
-            internal Node<T> Next { get; set; } = null;
-            internal T Value { get; set; } = null;
+            internal Node<T>? Next { get; set; } = null;
+            internal T Value { get; set; }
 
             internal Node(T t)
             {
